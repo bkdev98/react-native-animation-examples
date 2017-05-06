@@ -4,12 +4,13 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import AnimatedBasic from './src/AnimatedBasic';
 import Button from './src/Button';
+import Card from './src/Card';
 
 class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Button />
+        <Card />
       </View>
     );
   }

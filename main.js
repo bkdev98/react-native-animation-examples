@@ -5,12 +5,13 @@ import { StyleSheet, Text, View } from 'react-native';
 import AnimatedBasic from './src/AnimatedBasic';
 import Button from './src/Button';
 import Card from './src/Card';
+import ColorBox from './src/ColorBox';
 
 class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Card />
+        <ColorBox />
       </View>
     );
   }

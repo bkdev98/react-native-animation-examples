@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   StatusBar,
+  Share,
 } from 'react-native';
 
 import ShareIcon from '../icons/ShareIcon';
@@ -42,7 +43,14 @@ class List extends Component {
       fontSize: 20,
       fontWeight: '400',
     },
-    headerRight: <ShareIcon onPress={() => {}} />,
+    headerRight: <ShareIcon onPress={() => Share.share({
+      message: 'Well its not far down to paradise, at leasts not for me',
+      title: 'Christopher Cross',
+      url: 'https://github.com/bkdev98/react-native-animation-examples',
+    }, {
+      dialogTitle: 'Sailing',
+    })}
+    />,
     headerLeft: <MenuIcon onPress={() => {}} />,
   }
 

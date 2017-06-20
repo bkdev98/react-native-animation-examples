@@ -3,16 +3,16 @@ import {
 } from 'react-navigation';
 
 import List from './List';
-import AnimatedBasic from './AnimatedBasic';
-import Button from './Button';
-import Card from './Card';
-import ColorBox from './ColorBox';
+import AnimatedBasic from './animations/AnimatedBasic';
+import MagicButton from './animations/MagicButton';
+import MagicCard from './animations/MagicCard';
+import ColorBox from './animations/ColorBox';
 
 const Navigator = StackNavigator({
   List: { screen: List },
   AnimatedBasic: { screen: AnimatedBasic },
-  MagicButton: { screen: Button },
-  MagicCard: { screen: Card },
+  MagicButton: { screen: MagicButton },
+  MagicCard: { screen: MagicCard },
   ColorBox: { screen: ColorBox },
 });
 

@@ -2,7 +2,7 @@ import {
   StackNavigator,
 } from 'react-navigation';
 
-import List from './List';
+import List from './components/List';
 import AnimatedBasic from './animations/AnimatedBasic';
 import MagicButton from './animations/MagicButton';
 import MagicCard from './animations/MagicCard';

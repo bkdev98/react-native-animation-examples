@@ -5,9 +5,11 @@ import {
   TouchableWithoutFeedback,
   Animated,
   StyleSheet,
+  Linking,
 } from 'react-native';
 
 import BackIcon from '../icons/BackIcon';
+import OpenIcon from '../icons/OpenIcon';
 
 class MagicButton extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -23,6 +25,7 @@ class MagicButton extends Component {
       fontWeight: '400',
     },
     headerLeft: <BackIcon onPress={() => navigation.goBack()} />,
+    headerRight: <OpenIcon onPress={() => Linking.openURL('https://github.com/bkdev98/react-native-animation-examples/blob/master/src/animations/MagicButton.js')} />,
   })
 
   constructor(props) {

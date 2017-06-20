@@ -8,8 +8,8 @@ import {
   StatusBar,
 } from 'react-native';
 
-import ShareIcon from './icons/ShareIcon';
-import MenuIcon from './icons/MenuIcon';
+import ShareIcon from '../icons/ShareIcon';
+import MenuIcon from '../icons/MenuIcon';
 
 const data = [{
   key: 'AnimatedBasic',

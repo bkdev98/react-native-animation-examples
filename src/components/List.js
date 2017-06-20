@@ -7,10 +7,11 @@ import {
   StyleSheet,
   StatusBar,
   Share,
+  Linking,
 } from 'react-native';
 
 import ShareIcon from '../icons/ShareIcon';
-import MenuIcon from '../icons/MenuIcon';
+import HelpIcon from '../icons/HelpIcon';
 
 const data = [{
   key: 'AnimatedBasic',
@@ -51,7 +52,7 @@ class List extends Component {
       dialogTitle: 'Sailing',
     })}
     />,
-    headerLeft: <MenuIcon onPress={() => {}} />,
+    headerLeft: <HelpIcon onPress={() => Linking.openURL('https://facebook.com/bkdev98')} />,
   }
 
   render() {

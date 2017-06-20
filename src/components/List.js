@@ -37,6 +37,10 @@ const data = [{
   key: 'BouncingHeart',
   title: 'Bouncing Heart',
   opacity: '0.45',
+}, {
+  key: 'SpringyMenu',
+  title: 'Springy Menu',
+  opacity: '0.5',
 }];
 
 class List extends Component {

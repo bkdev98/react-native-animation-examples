@@ -41,7 +41,7 @@ const getInterpolate = (animatedScroll, i, imageLength) => {
   return animatedScroll.interpolate({
     inputRange,
     outputRange,
-    // extrapolate: 'clamp',
+    extrapolate: 'clamp',
   });
 };
 
@@ -71,7 +71,14 @@ class ParallaxScrollview extends Component {
     super(props);
     this.state = {
       animatedScroll: new Animated.Value(0),
+      scrollEnabled: true,
     };
+  }
+
+  handleFocus = (focused) => {
+    this.setState({
+      scrollEnabled: !focused,
+    });
   }
 
   render() {
@@ -81,6 +88,7 @@ class ParallaxScrollview extends Component {
           pagingEnabled
           horizontal
           scrollEventThrottle={16}
+          scrollEnabled={this.state.scrollEnabled}
           onScroll={
             Animated.event([
               {
@@ -98,6 +106,8 @@ class ParallaxScrollview extends Component {
               key={image.title}
               {...image}
               translateX={getInterpolate(this.state.animatedScroll, i, Images.length)}
+              onFocus={this.handleFocus}
+              focused={!this.state.scrollEnabled}
             />
           ))}
           {Array(...{ length: Images.length + 1 }).map((_, i) => getSeparator(i))}

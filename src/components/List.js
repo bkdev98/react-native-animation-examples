@@ -33,6 +33,10 @@ const data = [{
   key: 'ParallaxScrollview',
   title: 'Parallax Scrollview',
   opacity: '0.4',
+}, {
+  key: 'BouncingHeart',
+  title: 'Bouncing Heart',
+  opacity: '0.45',
 }];
 
 class List extends Component {

@@ -8,6 +8,7 @@ import MagicButton from './animations/MagicButton';
 import MagicCard from './animations/MagicCard';
 import ColorBox from './animations/ColorBox';
 import ParallaxScrollview from './animations/ParallaxScrollview';
+import BouncingHeart from './animations/BouncingHeart';
 
 const Navigator = StackNavigator({
   List: { screen: List },
@@ -16,6 +17,7 @@ const Navigator = StackNavigator({
   MagicCard: { screen: MagicCard },
   ColorBox: { screen: ColorBox },
   ParallaxScrollview: { screen: ParallaxScrollview },
+  BouncingHeart: { screen: BouncingHeart },
 });
 
 export default Navigator;

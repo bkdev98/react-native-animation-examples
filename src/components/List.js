@@ -29,6 +29,10 @@ const data = [{
   key: 'ColorBox',
   title: 'Color Box',
   opacity: '0.35',
+}, {
+  key: 'ParallaxScrollview',
+  title: 'Parallax Scrollview',
+  opacity: '0.4',
 }];
 
 class List extends Component {

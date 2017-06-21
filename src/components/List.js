@@ -43,6 +43,9 @@ const data = [{
 }, {
   key: 'EventCard',
   title: 'Event Card',
+}, {
+  key: 'CollapseHeader',
+  title: 'CollapseHeader',
 }];
 
 class List extends Component {

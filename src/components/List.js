@@ -7,11 +7,11 @@ import {
   StyleSheet,
   StatusBar,
   Share,
-  Linking,
 } from 'react-native';
 
 import ShareIcon from '../icons/ShareIcon';
 import HelpIcon from '../icons/HelpIcon';
+import Info from './Info';
 
 const data = [{
 //   key: 'AnimatedBasic',
@@ -60,8 +60,8 @@ const data = [{
 }];
 
 class List extends Component {
-  static navigationOptions = {
-    headerTitle: 'Ride Like The Wind',
+  static navigationOptions = ({ navigation }) => ({
+    headerTitle: 'Animations',
     headerStyle: {
       height: 80,
       backgroundColor: '#EC407A',
@@ -80,12 +80,34 @@ class List extends Component {
       dialogTitle: 'Sailing',
     })}
     />,
-    headerLeft: <HelpIcon onPress={() => Linking.openURL('https://facebook.com/bkdev98')} />,
+    headerLeft: navigation.state.params ? navigation.state.params.headerLeft : null,
+  })
+
+  state = {
+    infoOpen: false,
+  }
+
+  componentDidMount() {
+    this.props.navigation.setParams({
+      headerLeft: <HelpIcon onPress={this.toggleInfoDialog} />,
+    });
+  }
+
+  toggleInfoDialog = () => {
+    this.setState({
+      infoOpen: !this.state.infoOpen,
+    });
   }
 
   render() {
     return (
-      <View>
+      <View style={styles.container}>
+        {this.state.infoOpen &&
+          <View style={styles.infoContainer}>
+            <Info onPress={() => this.setState({ infoOpen: true })} />
+          </View>
+        }
+
         <StatusBar barStyle="light-content" />
         <FlatList
           data={data}
@@ -111,6 +133,10 @@ class List extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  infoContainer: {
+    position: 'absolute',
+    zIndex: 1000,
   },
   headerContainer: {
     height: 100,

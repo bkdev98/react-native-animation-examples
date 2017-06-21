@@ -13,46 +13,42 @@ import {
 import ShareIcon from '../icons/ShareIcon';
 import HelpIcon from '../icons/HelpIcon';
 
+const getRandomInt = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; // The maximum is exclusive and the minimum is inclusive
+};
+
 const data = [{
 //   key: 'AnimatedBasic',
 //   title: 'Animated Basic',
-//   opacity: '0.2',
 // }, {
 //   key: 'MagicButton',
 //   title: 'Magic Button',
-//   opacity: '0.25',
 // }, {
 //   key: 'MagicCard',
 //   title: 'Magic Card',
-//   opacity: '0.3',
 // }, {
 //   key: 'ColorBox',
 //   title: 'Color Box',
-//   opacity: '0.35',
 // }, {
   key: 'ParallaxScrollview',
   title: 'Parallax Scrollview',
-  opacity: '0.4',
 }, {
   key: 'BouncingHeart',
   title: 'Bouncing Heart',
-  opacity: '0.45',
 }, {
   key: 'SpringyMenu',
   title: 'Springy Menu',
-  opacity: '0.5',
 }, {
   key: 'CommentModal',
   title: 'Comment Modal',
-  opacity: '0.55',
 }, {
   key: 'FloatingHeart',
   title: 'Floating Heart',
-  opacity: '0.6',
 }, {
   key: 'EventCard',
   title: 'Event Card',
-  opacity: '0.65',
 }];
 
 class List extends Component {
@@ -88,7 +84,7 @@ class List extends Component {
           renderItem={({ item }) =>
             (<TouchableOpacity
               onPress={() => this.props.navigation.navigate(item.key)}
-              style={[styles.itemContainer, { backgroundColor: `rgba(255, 26, 117, ${item.opacity})` }]}
+              style={[styles.itemContainer, { backgroundColor: `rgba(255, 26, 117, 0.${getRandomInt(25, 65)})` }]}
             >
               <Text style={styles.itemTitle}>{item.title}</Text>
             </TouchableOpacity>)

@@ -14,22 +14,22 @@ import ShareIcon from '../icons/ShareIcon';
 import HelpIcon from '../icons/HelpIcon';
 
 const data = [{
-  key: 'AnimatedBasic',
-  title: 'Animated Basic',
-  opacity: '0.2',
-}, {
-  key: 'MagicButton',
-  title: 'Magic Button',
-  opacity: '0.25',
-}, {
-  key: 'MagicCard',
-  title: 'Magic Card',
-  opacity: '0.3',
-}, {
-  key: 'ColorBox',
-  title: 'Color Box',
-  opacity: '0.35',
-}, {
+//   key: 'AnimatedBasic',
+//   title: 'Animated Basic',
+//   opacity: '0.2',
+// }, {
+//   key: 'MagicButton',
+//   title: 'Magic Button',
+//   opacity: '0.25',
+// }, {
+//   key: 'MagicCard',
+//   title: 'Magic Card',
+//   opacity: '0.3',
+// }, {
+//   key: 'ColorBox',
+//   title: 'Color Box',
+//   opacity: '0.35',
+// }, {
   key: 'ParallaxScrollview',
   title: 'Parallax Scrollview',
   opacity: '0.4',
@@ -45,6 +45,10 @@ const data = [{
   key: 'CommentModal',
   title: 'Comment Modal',
   opacity: '0.55',
+}, {
+  key: 'FloatingHeart',
+  title: 'Floating Heart',
+  opacity: '0.6',
 }];
 
 class List extends Component {

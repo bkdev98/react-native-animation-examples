@@ -11,6 +11,7 @@ import ParallaxScrollview from './animations/ParallaxScrollview';
 import BouncingHeart from './animations/BouncingHeart';
 import SpringyMenu from './animations/SpringyMenu';
 import CommentModal from './animations/CommentModal';
+import FloatingHeart from './animations/FloatingHeart';
 
 const Navigator = StackNavigator({
   List: { screen: List },
@@ -22,6 +23,7 @@ const Navigator = StackNavigator({
   BouncingHeart: { screen: BouncingHeart },
   SpringyMenu: { screen: SpringyMenu },
   CommentModal: { screen: CommentModal },
+  FloatingHeart: { screen: FloatingHeart },
 });
 
 export default Navigator;

@@ -28,24 +28,35 @@ const data = [{
 // }, {
   key: 'ParallaxScrollview',
   title: 'Parallax Scrollview',
+  icon: '🐬',
 }, {
   key: 'BouncingHeart',
   title: 'Bouncing Heart',
+  icon: '💕',
 }, {
   key: 'SpringyMenu',
   title: 'Springy Menu',
+  icon: '🍕',
 }, {
   key: 'CommentModal',
   title: 'Comment Modal',
+  icon: '🍻',
 }, {
   key: 'FloatingHeart',
   title: 'Floating Heart',
+  icon: '🦄',
 }, {
   key: 'EventCard',
   title: 'Event Card',
+  icon: '🎼',
 }, {
   key: 'CollapseHeader',
-  title: 'CollapseHeader',
+  title: 'Collapse Header',
+  icon: '🎃',
+}, {
+  key: 'MagicInput',
+  title: 'Magic Input',
+  icon: '💅',
 }];
 
 class List extends Component {
@@ -83,7 +94,12 @@ class List extends Component {
               onPress={() => this.props.navigation.navigate(item.key)}
               style={[styles.itemContainer, { backgroundColor: `rgba(255, 26, 117, ${0.3 + (0.05 * index)})` }]}
             >
-              <Text style={styles.itemTitle}>{item.title}</Text>
+              <View style={styles.iconContainer}>
+                <Text style={styles.icon}>{item.icon}</Text>
+              </View>
+              <View style={styles.itemTitleContainer}>
+                <Text style={styles.itemTitle}>{item.title}</Text>
+              </View>
             </TouchableOpacity>)
           }
         />
@@ -107,7 +123,19 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
   itemContainer: {
+    flexDirection: 'row',
     height: 90,
+  },
+  iconContainer: {
+    width: 90,
+    backgroundColor: 'rgba(255,255,255,.1)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  icon: {
+    fontSize: 30,
+  },
+  itemTitleContainer: {
     justifyContent: 'center',
     paddingLeft: 20,
   },

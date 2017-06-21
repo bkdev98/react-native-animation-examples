@@ -14,6 +14,7 @@ import CommentModal from './animations/CommentModal';
 import FloatingHeart from './animations/FloatingHeart';
 import EventCard from './animations/EventCard';
 import CollapseHeader from './animations/CollapseHeader';
+import MagicInput from './animations/MagicInput';
 
 const Navigator = StackNavigator({
   List: { screen: List },
@@ -28,6 +29,7 @@ const Navigator = StackNavigator({
   FloatingHeart: { screen: FloatingHeart },
   EventCard: { screen: EventCard },
   CollapseHeader: { screen: CollapseHeader },
+  MagicInput: { screen: MagicInput },
 });
 
 export default Navigator;

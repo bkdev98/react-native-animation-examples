@@ -12,6 +12,7 @@ import BouncingHeart from './animations/BouncingHeart';
 import SpringyMenu from './animations/SpringyMenu';
 import CommentModal from './animations/CommentModal';
 import FloatingHeart from './animations/FloatingHeart';
+import EventCard from './animations/EventCard';
 
 const Navigator = StackNavigator({
   List: { screen: List },
@@ -24,6 +25,7 @@ const Navigator = StackNavigator({
   SpringyMenu: { screen: SpringyMenu },
   CommentModal: { screen: CommentModal },
   FloatingHeart: { screen: FloatingHeart },
+  EventCard: { screen: EventCard },
 });
 
 export default Navigator;

@@ -49,6 +49,10 @@ const data = [{
   key: 'FloatingHeart',
   title: 'Floating Heart',
   opacity: '0.6',
+}, {
+  key: 'EventCard',
+  title: 'Event Card',
+  opacity: '0.65',
 }];
 
 class List extends Component {

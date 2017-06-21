@@ -17,7 +17,7 @@ import Unsplash from './assets/images/4.jpeg';
 
 class EventCard extends Component {
   static navigationOptions = ({ navigation }) => ({
-    headerTitle: 'Animated Basic',
+    headerTitle: 'Event Card',
     headerStyle: {
       height: 80,
       backgroundColor: '#EC407A',

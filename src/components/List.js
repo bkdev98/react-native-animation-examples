@@ -13,12 +13,6 @@ import {
 import ShareIcon from '../icons/ShareIcon';
 import HelpIcon from '../icons/HelpIcon';
 
-const getRandomInt = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min; // The maximum is exclusive and the minimum is inclusive
-};
-
 const data = [{
 //   key: 'AnimatedBasic',
 //   title: 'Animated Basic',
@@ -81,10 +75,10 @@ class List extends Component {
         <StatusBar barStyle="light-content" />
         <FlatList
           data={data}
-          renderItem={({ item }) =>
+          renderItem={({ item, index }) =>
             (<TouchableOpacity
               onPress={() => this.props.navigation.navigate(item.key)}
-              style={[styles.itemContainer, { backgroundColor: `rgba(255, 26, 117, 0.${getRandomInt(25, 65)})` }]}
+              style={[styles.itemContainer, { backgroundColor: `rgba(255, 26, 117, ${0.3 + (0.05 * index)})` }]}
             >
               <Text style={styles.itemTitle}>{item.title}</Text>
             </TouchableOpacity>)

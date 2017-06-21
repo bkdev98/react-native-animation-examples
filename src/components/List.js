@@ -41,6 +41,10 @@ const data = [{
   key: 'SpringyMenu',
   title: 'Springy Menu',
   opacity: '0.5',
+}, {
+  key: 'CommentModal',
+  title: 'Comment Modal',
+  opacity: '0.55',
 }];
 
 class List extends Component {
